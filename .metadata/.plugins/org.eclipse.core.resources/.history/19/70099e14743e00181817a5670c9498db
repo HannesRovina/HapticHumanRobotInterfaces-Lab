@@ -195,7 +195,7 @@ float32_t PID_Regulator1(float32_t error, float32_t previous_error, float32_t dt
 {
 
 	error_accumulator += error;
-	return (error*Kp + Kd*(error-previous_error)/dt+Ki*error_accumulator*dt);
+	return (error*Kp + Kd*(error-previous_error)/dt+Ki*error_accumulator);
 
 }
 

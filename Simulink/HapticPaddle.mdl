@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.86"
+    ComputedModelVersion    "1.87"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -40,7 +40,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-7.0, 0.0, 974.0, 1047.0]
+      Location		      [-8.0, -8.0, 1936.0, 1056.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -64,9 +64,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[924.0, 867.0]
+	Extents			[1886.0, 876.0]
 	ZoomFactor		[1.0]
-	Offset			[-495.80375508016766, -62.393843157288188]
+	Offset			[-495.80375508016766, -153.76883946180021]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -86,7 +86,7 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAWAAAA4QAAABfAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAJwD///8AAAO+AAADmQAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAAJwD///8AAAeAAAADogAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
       "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAMr/////wAAAAAAAAAA/"
@@ -99,9 +99,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Hannes"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Mar 27 10:57:36 2018"
-  RTWModifiedTimeStamp	  444048689
-  ModelVersionFormat	  "1.%<AutoIncrement:86>"
+  LastModifiedDate	  "Thu Apr 12 12:32:27 2018"
+  RTWModifiedTimeStamp	  445437139
+  ModelVersionFormat	  "1.%<AutoIncrement:87>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1058,19 +1058,6 @@ Model {
       SampleTime	      "-1"
     }
     Block {
-      BlockType		      Sin
-      SineType		      "Time based"
-      TimeSource	      "Use simulation time"
-      Amplitude		      "1"
-      Bias		      "0"
-      Frequency		      "1"
-      Phase		      "0"
-      Samples		      "10"
-      Offset		      "0"
-      SampleTime	      "-1"
-      VectorParams1D	      on
-    }
-    Block {
       BlockType		      SubSystem
       ShowPortLabels	      "FromPortIcon"
       Permissions	      "ReadWrite"
@@ -1155,7 +1142,7 @@ Model {
   }
   System {
     Name		    "HapticPaddle"
-    Location		    [-7, 0, 967, 1047]
+    Location		    [-8, -8, 1928, 1048]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1175,7 +1162,7 @@ Model {
       Name		      "Add"
       SID		      "77"
       Ports		      [2, 1]
-      Position		      [-160, 267, -130, 298]
+      Position		      [70, 272, 100, 303]
       ZOrder		      25
       Inputs		      "+-"
       InputSameDT	      off
@@ -1186,26 +1173,15 @@ Model {
       BlockType		      Clock
       Name		      "Clock"
       SID		      "31"
-      Position		      [-55, -65, -35, -45]
+      Position		      [-35, 175, -15, 195]
       ZOrder		      -5
-    }
-    Block {
-      BlockType		      Sin
-      Name		      "Desired Position"
-      SID		      "11"
-      Ports		      [0, 1]
-      Position		      [-380, 120, -350, 150]
-      ZOrder		      -14
-      Amplitude		      "0.0014"
-      Frequency		      "2*pi*0.5"
-      SampleTime	      "0"
     }
     Block {
       BlockType		      Reference
       Name		      "PID Controller"
       SID		      "76"
       Ports		      [1, 1]
-      Position		      [-15, 267, 25, 303]
+      Position		      [150, 272, 190, 308]
       ZOrder		      24
       LibraryVersion	      "1.388"
       SourceBlock	      "simulink/Continuous/PID Controller"
@@ -1328,7 +1304,7 @@ Model {
       BlockType		      Constant
       Name		      "Set Point\n"
       SID		      "78"
-      Position		      [-265, 260, -235, 290]
+      Position		      [-35, 265, -5, 295]
       ZOrder		      26
       Value		      "10"
     }
@@ -1655,7 +1631,7 @@ Model {
 	  BlockType		  Outport
 	  Name			  "Out3"
 	  SID			  "74"
-	  Position		  [1638, 243, 1668, 257]
+	  Position		  [1640, 243, 1670, 257]
 	  ZOrder		  26
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -1976,7 +1952,7 @@ Model {
       Name		      "To Workspace"
       SID		      "32"
       Ports		      [1]
-      Position		      [20, -70, 80, -40]
+      Position		      [40, 170, 100, 200]
       ZOrder		      -15
       VariableName	      "t"
       MaxDataPoints	      "inf"
@@ -1987,7 +1963,7 @@ Model {
       Name		      "To Workspace1"
       SID		      "33"
       Ports		      [1]
-      Position		      [1240, 435, 1300, 465]
+      Position		      [420, 495, 480, 525]
       ZOrder		      -16
       VariableName	      "phi"
       MaxDataPoints	      "inf"
@@ -1998,7 +1974,7 @@ Model {
       Name		      "To Workspace2"
       SID		      "34"
       Ports		      [1]
-      Position		      [1240, 135, 1300, 165]
+      Position		      [420, 275, 480, 305]
       ZOrder		      -17
       VariableName	      "omega_dot"
       MaxDataPoints	      "inf"
@@ -2009,7 +1985,7 @@ Model {
       Name		      "To Workspace3"
       SID		      "35"
       Ports		      [1]
-      Position		      [1240, 286, 1300, 304]
+      Position		      [420, 396, 480, 414]
       ZOrder		      -18
       VariableName	      "omega"
       MaxDataPoints	      "inf"
@@ -2020,7 +1996,7 @@ Model {
       Name		      "motor_torque"
       SID		      "27"
       Ports		      [1]
-      Position		      [1265, -16, 1295, 16]
+      Position		      [420, 154, 450, 186]
       ZOrder		      -20
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -2048,7 +2024,7 @@ Model {
       Name		      "omega_dot_scope"
       SID		      "26"
       Ports		      [1]
-      Position		      [1255, 84, 1285, 116]
+      Position		      [420, 224, 450, 256]
       ZOrder		      -23
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -2070,7 +2046,7 @@ Model {
       Name		      "omega_scope"
       SID		      "25"
       Ports		      [1]
-      Position		      [1240, 229, 1270, 261]
+      Position		      [420, 339, 450, 371]
       ZOrder		      -22
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -2092,7 +2068,7 @@ Model {
       Name		      "phi_scope"
       SID		      "22"
       Ports		      [1]
-      Position		      [1240, 379, 1270, 411]
+      Position		      [420, 439, 450, 471]
       ZOrder		      -24
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -2127,16 +2103,10 @@ Model {
       ZOrder		      154
       SrcBlock		      "Subsystem"
       SrcPort		      4
-      Points		      [451, 0]
+      Points		      [13, 0]
       Branch {
-	ZOrder			161
-	Points			[0, 35; -956, 0]
-	DstBlock		"Add"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			160
-	Points			[429, 0; 0, 85]
+	ZOrder			175
+	Points			[47, 0; 0, 145]
 	Branch {
 	  ZOrder		  155
 	  Points		  [0, 55]
@@ -2149,21 +2119,27 @@ Model {
 	  DstPort		  1
 	}
       }
+      Branch {
+	ZOrder			161
+	Points			[0, 35; -288, 0]
+	DstBlock		"Add"
+	DstPort			2
+      }
     }
     Line {
       ZOrder		      153
       SrcBlock		      "Subsystem"
       SrcPort		      3
-      Points		      [888, 0]
+      Points		      [68, 0; 0, 60]
       Branch {
-	ZOrder			38
-	Points			[0, -50]
-	DstBlock		"omega_scope"
+	ZOrder			176
+	Points			[0, 50]
+	DstBlock		"To Workspace3"
 	DstPort			1
       }
       Branch {
-	ZOrder			16
-	DstBlock		"To Workspace3"
+	ZOrder			38
+	DstBlock		"omega_scope"
 	DstPort			1
       }
     }
@@ -2171,16 +2147,17 @@ Model {
       ZOrder		      152
       SrcBlock		      "Subsystem"
       SrcPort		      2
-      Points		      [449, 0; 0, -130; 446, 0]
+      Points		      [59, 0]
       Branch {
-	ZOrder			41
-	Points			[0, -50]
-	DstBlock		"omega_dot_scope"
+	ZOrder			179
+	Points			[0, 10]
+	DstBlock		"To Workspace2"
 	DstPort			1
       }
       Branch {
-	ZOrder			40
-	DstBlock		"To Workspace2"
+	ZOrder			41
+	Points			[0, -40]
+	DstBlock		"omega_dot_scope"
 	DstPort			1
       }
     }
@@ -2188,7 +2165,7 @@ Model {
       ZOrder		      151
       SrcBlock		      "Subsystem"
       SrcPort		      1
-      Points		      [425, 0; 0, -265]
+      Points		      [53, 0; 0, -95]
       DstBlock		      "motor_torque"
       DstPort		      1
     }
@@ -2210,14 +2187,13 @@ Model {
       ZOrder		      162
       SrcBlock		      "PID Controller"
       SrcPort		      1
-      Points		      [125, 0; 0, 5]
       DstBlock		      "Subsystem"
       DstPort		      1
     }
     Annotation {
       SID		      "44"
       Name		      "Blocks to display and save data:"
-      Position		      [1185, 46, 1329, 61]
+      Position		      [363, 110, 507, 125]
       InternalMargins	      [0, 0, 0, 0]
       FixedHeight	      off
       FixedWidth	      off

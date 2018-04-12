@@ -33,7 +33,7 @@ volatile float32_t Kp; //Parameter for PID
 volatile float32_t Kd; //Parameter for PID
 volatile float32_t Ki; //Parameter for PID
 volatile float32_t overshoot_Angle; //Record overshoot angle
-volatile float32_t rise_time; // Record rise time
+volatile float32_t rise_time;
 volatile uint32_t first_trigger;
 void hapt_Update(void);
 float32_t hapt_LowPassFilter(float32_t previousFilteredValue, float32_t input,float32_t dt, float32_t tau);
@@ -61,7 +61,6 @@ void hapt_Init(void)
 	error_accumulator = 0.0f;
 	first_trigger = 0;
 	rise_time = 0.0f;
-	overshoot_Angle = 0.0f;
 
 	// Make the timers call the update function periodically.
 	cbt_SetHapticControllerTimer(hapt_Update, DEFAULT_HAPTIC_CONTROLLER_PERIOD);
@@ -69,7 +68,7 @@ void hapt_Init(void)
 	// Share some variables with the computer.
 	comm_monitorUint32Func("timestep [us]", cbt_GetHapticControllerPeriod, cbt_SetHapticControllerPeriod);
 	comm_monitorFloat("motor_torque [N.m]", (float32_t*)&hapt_motorTorque, READWRITE);
-	//comm_monitorFloat("encoder_paddle_pos [deg]", (float32_t*)&hapt_encoderPaddleAngle, READONLY);
+	comm_monitorFloat("encoder_paddle_pos [deg]", (float32_t*)&hapt_encoderPaddleAngle, READONLY);
 	//comm_monitorFloat("paddle_pos [deg]", (float32_t*)&hapt_paddleAngle, READONLY);
 	//comm_monitorFloat("paddle_speed [deg/s]", (float32_t*)&hapt_paddleSpeed, READONLY);
 	//comm_monitorFloat("paddle_accel [deg/s^2]", (float32_t*)&hapt_paddleAccel, READONLY);
@@ -84,7 +83,6 @@ void hapt_Init(void)
 	comm_monitorFloat("Kd ", (float32_t*)&Kd, READWRITE);
 	comm_monitorBool("enable Encoder_Angle", (bool*)&enable_EncoderAngle, WRITEONLY);
 	comm_monitorFloat("rise_time [s]", (float32_t*)&rise_time, READONLY);
-	comm_monitorFloat("overshoot_angle [deg]", (float32_t*)&overshoot_Angle, READONLY);
 }
 /**
 * @brief Updates the haptic controller state.
@@ -127,7 +125,7 @@ void hapt_Update()
 	hapt_motorTorque = 0.0f;
 
 	//Sinusoidal motor torque
-	//hapt_motorTorque = 0.0011*sin(2*3.14*hapt_timestamp*1e-6);
+	//hapt_motorTorque = 0.0014*sin(2*3.14*hapt_timestamp*1e-6);
 
 	//Reinitialize error_accumulator for I control
 	if(!enable_PID)
@@ -148,14 +146,10 @@ void hapt_Update()
 		if (first_trigger == 1)
 		{
 			rise_time += dt;
-			if(hapt_paddlePosFilt>Target_Angle)
+			if(hapt_paddlePosFilt==Target_Angle)
 			{
 				first_trigger = 2;
 			}
-		}
-		if (hapt_paddlePosFilt>overshoot_Angle)
-		{
-			overshoot_Angle = hapt_paddlePosFilt;
 		}
 	}
 
@@ -195,7 +189,7 @@ float32_t PID_Regulator1(float32_t error, float32_t previous_error, float32_t dt
 {
 
 	error_accumulator += error;
-	return (error*Kp + Kd*(error-previous_error)/dt+Ki*error_accumulator*dt);
+	return (error*Kp + Kd*(error-previous_error)/dt+Ki*error_accumulator);
 
 }
 

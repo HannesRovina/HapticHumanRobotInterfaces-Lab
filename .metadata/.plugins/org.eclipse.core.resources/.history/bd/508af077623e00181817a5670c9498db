@@ -26,15 +26,12 @@ const float32_t filterCutoffFreqSpeed = 100.0f; // Cutoff frequency for the spee
 const float32_t filterCutoffFreqAccel = 10.0f; // Cutoff frequency for the speed/acceleration filter [Hz].
 
 volatile bool enable_PID;
-volatile bool enable_EncoderAngle; //Change between hall or encoder angle
 volatile float32_t Target_Angle; // Target andle for PID control [deg].
 volatile float32_t error_accumulator; //integral of the error for the I in the PID controller
 volatile float32_t Kp; //Parameter for PID
 volatile float32_t Kd; //Parameter for PID
 volatile float32_t Ki; //Parameter for PID
-volatile float32_t overshoot_Angle; //Record overshoot angle
-volatile float32_t rise_time; // Record rise time
-volatile uint32_t first_trigger;
+
 void hapt_Update(void);
 float32_t hapt_LowPassFilter(float32_t previousFilteredValue, float32_t input,float32_t dt, float32_t tau);
 float32_t PID_Regulator1(float32_t error, float32_t previous_error, float32_t dt);
@@ -46,7 +43,6 @@ void hapt_Init(void)
 {
 	//Initializing variables
 	enable_PID = false;
-	enable_EncoderAngle = false;
 	Kp = 0.0f;
 	Ki = 0.0f;
 	Kd = 0.0f;
@@ -59,9 +55,6 @@ void hapt_Init(void)
 	hapt_paddleAccelFilt = 0.0f;
 	Target_Angle = 0.0f;
 	error_accumulator = 0.0f;
-	first_trigger = 0;
-	rise_time = 0.0f;
-	overshoot_Angle = 0.0f;
 
 	// Make the timers call the update function periodically.
 	cbt_SetHapticControllerTimer(hapt_Update, DEFAULT_HAPTIC_CONTROLLER_PERIOD);
@@ -69,7 +62,7 @@ void hapt_Init(void)
 	// Share some variables with the computer.
 	comm_monitorUint32Func("timestep [us]", cbt_GetHapticControllerPeriod, cbt_SetHapticControllerPeriod);
 	comm_monitorFloat("motor_torque [N.m]", (float32_t*)&hapt_motorTorque, READWRITE);
-	//comm_monitorFloat("encoder_paddle_pos [deg]", (float32_t*)&hapt_encoderPaddleAngle, READONLY);
+	comm_monitorFloat("encoder_paddle_pos [deg]", (float32_t*)&hapt_encoderPaddleAngle, READONLY);
 	//comm_monitorFloat("paddle_pos [deg]", (float32_t*)&hapt_paddleAngle, READONLY);
 	//comm_monitorFloat("paddle_speed [deg/s]", (float32_t*)&hapt_paddleSpeed, READONLY);
 	//comm_monitorFloat("paddle_accel [deg/s^2]", (float32_t*)&hapt_paddleAccel, READONLY);
@@ -82,9 +75,6 @@ void hapt_Init(void)
 	comm_monitorFloat("Kp ", (float32_t*)&Kp, READWRITE);
 	comm_monitorFloat("Ki ", (float32_t*)&Ki, READWRITE);
 	comm_monitorFloat("Kd ", (float32_t*)&Kd, READWRITE);
-	comm_monitorBool("enable Encoder_Angle", (bool*)&enable_EncoderAngle, WRITEONLY);
-	comm_monitorFloat("rise_time [s]", (float32_t*)&rise_time, READONLY);
-	comm_monitorFloat("overshoot_angle [deg]", (float32_t*)&overshoot_Angle, READONLY);
 }
 /**
 * @brief Updates the haptic controller state.
@@ -106,11 +96,8 @@ void hapt_Update()
 	hapt_encoderPaddleAngle = motorShaftAngle / REDUCTION_RATIO;
 
 	// Compute the paddle angle from the Hall sensor voltage or the encoder which is then used for the PID.
-	if(!enable_EncoderAngle)
-	{
-		hapt_paddleAngle = hapt_hallVoltage * (33.0f)-81.9f;
-	}
-	else hapt_paddleAngle = hapt_encoderPaddleAngle;
+	hapt_paddleAngle = hapt_hallVoltage * (33.0f)+81.9f;
+	//hapt_paddleAngle = hapt_encoderPaddleAngle;
 
 	//Filter the position value
 	hapt_paddlePosFilt = hapt_LowPassFilter(hapt_paddlePosFilt,hapt_paddleAngle, dt,filterCutoffFreqSpeed);
@@ -127,36 +114,18 @@ void hapt_Update()
 	hapt_motorTorque = 0.0f;
 
 	//Sinusoidal motor torque
-	//hapt_motorTorque = 0.0011*sin(2*3.14*hapt_timestamp*1e-6);
+	//hapt_motorTorque = 0.0014*sin(2*3.14*hapt_timestamp*1e-6);
 
 	//Reinitialize error_accumulator for I control
 	if(!enable_PID)
 	{
 		error_accumulator = 0;
-		first_trigger = 0;
 	}
 
 	//Calculate motor torque with PID
 	if(enable_PID)
 	{
 		hapt_motorTorque = PID_Regulator1(Target_Angle-hapt_paddlePosFilt,Target_Angle-hapt_paddlePrevPos,dt)/REDUCTION_RATIO;
-		if(first_trigger==0)
-		{
-			first_trigger = 1;
-			rise_time = 0;
-		}
-		if (first_trigger == 1)
-		{
-			rise_time += dt;
-			if(hapt_paddlePosFilt>Target_Angle)
-			{
-				first_trigger = 2;
-			}
-		}
-		if (hapt_paddlePosFilt>overshoot_Angle)
-		{
-			overshoot_Angle = hapt_paddlePosFilt;
-		}
 	}
 
 	torq_SetTorque(hapt_motorTorque);
@@ -164,6 +133,7 @@ void hapt_Update()
 	//Store the previous position and speed for derivative purposes
 	hapt_paddlePrevPos = hapt_paddlePosFilt;
 	hapt_paddlePrevSpeed = hapt_paddleSpeed;
+
 }
 
 
@@ -195,7 +165,7 @@ float32_t PID_Regulator1(float32_t error, float32_t previous_error, float32_t dt
 {
 
 	error_accumulator += error;
-	return (error*Kp + Kd*(error-previous_error)/dt+Ki*error_accumulator*dt);
+	return -(error*Kp + Kd*(error-previous_error)/dt+Ki*error_accumulator);
 
 }
 

@@ -69,7 +69,7 @@ void hapt_Init(void)
 	// Share some variables with the computer.
 	comm_monitorUint32Func("timestep [us]", cbt_GetHapticControllerPeriod, cbt_SetHapticControllerPeriod);
 	comm_monitorFloat("motor_torque [N.m]", (float32_t*)&hapt_motorTorque, READWRITE);
-	//comm_monitorFloat("encoder_paddle_pos [deg]", (float32_t*)&hapt_encoderPaddleAngle, READONLY);
+	comm_monitorFloat("encoder_paddle_pos [deg]", (float32_t*)&hapt_encoderPaddleAngle, READONLY);
 	//comm_monitorFloat("paddle_pos [deg]", (float32_t*)&hapt_paddleAngle, READONLY);
 	//comm_monitorFloat("paddle_speed [deg/s]", (float32_t*)&hapt_paddleSpeed, READONLY);
 	//comm_monitorFloat("paddle_accel [deg/s^2]", (float32_t*)&hapt_paddleAccel, READONLY);
@@ -195,7 +195,7 @@ float32_t PID_Regulator1(float32_t error, float32_t previous_error, float32_t dt
 {
 
 	error_accumulator += error;
-	return (error*Kp + Kd*(error-previous_error)/dt+Ki*error_accumulator*dt);
+	return (error*Kp + Kd*(error-previous_error)/dt+Ki*error_accumulator);
 
 }
 
