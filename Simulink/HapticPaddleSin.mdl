@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.81"
+    ComputedModelVersion    "1.82"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -65,8 +65,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1886.0, 876.0]
-	ZoomFactor		[1.0]
-	Offset			[-380.17875135487736, -62.393843157288188]
+	ZoomFactor		[0.8]
+	Offset			[-536.57875135487745, -153.34384315728812]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -99,9 +99,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Hannes"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Mar 27 10:32:54 2018"
-  RTWModifiedTimeStamp	  444047512
-  ModelVersionFormat	  "1.%<AutoIncrement:81>"
+  LastModifiedDate	  "Thu Apr 12 12:28:48 2018"
+  RTWModifiedTimeStamp	  445436893
+  ModelVersionFormat	  "1.%<AutoIncrement:82>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1167,146 +1167,22 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "76"
     Block {
       BlockType		      Clock
       Name		      "Clock"
       SID		      "31"
-      Position		      [-55, -65, -35, -45]
+      Position		      [190, 175, 210, 195]
       ZOrder		      -5
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "PID Controller"
-      SID		      "76"
-      Ports		      [1, 1]
-      Position		      [320, 447, 360, 483]
-      ZOrder		      24
-      LibraryVersion	      "1.388"
-      SourceBlock	      "simulink/Continuous/PID Controller"
-      SourceType	      "PID 1dof"
-      ContentPreviewEnabled   off
-      Controller	      "PID"
-      TimeDomain	      "Continuous-time"
-      SampleTime	      "-1"
-      IntegratorMethod	      "Forward Euler"
-      FilterMethod	      "Forward Euler"
-      Form		      "Parallel"
-      UseFilter		      on
-      ControllerParametersSource "internal"
-      P			      "1"
-      I			      "1"
-      D			      "0"
-      N			      "100"
-      InitialConditionSource  "internal"
-      InitialConditionForIntegrator "0"
-      InitialConditionForFilter	"0"
-      ExternalReset	      "none"
-      IgnoreLimit	      off
-      ZeroCross		      on
-      LimitOutput	      off
-      UpperSaturationLimit    "inf"
-      LowerSaturationLimit    "-inf"
-      LinearizeAsGain	      on
-      AntiWindupMode	      "none"
-      Kb		      "1"
-      TrackingMode	      off
-      Kt		      "1"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-      LockScale		      off
-      PParamMin		      "[]"
-      PParamMax		      "[]"
-      PParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      IParamMin		      "[]"
-      IParamMax		      "[]"
-      IParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      DParamMin		      "[]"
-      DParamMax		      "[]"
-      DParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      NParamMin		      "[]"
-      NParamMax		      "[]"
-      NParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      KbParamMin	      "[]"
-      KbParamMax	      "[]"
-      KbParamDataTypeStr      "Inherit: Inherit via internal rule"
-      KtParamMin	      "[]"
-      KtParamMax	      "[]"
-      KtParamDataTypeStr      "Inherit: Inherit via internal rule"
-      POutMin		      "[]"
-      POutMax		      "[]"
-      POutDataTypeStr	      "Inherit: Inherit via internal rule"
-      PGainOutDataTypeStr     "Inherit: Inherit via internal rule"
-      PProdOutDataTypeStr     "Inherit: Inherit via internal rule"
-      IOutMin		      "[]"
-      IOutMax		      "[]"
-      IOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      IGainOutDataTypeStr     "Inherit: Inherit via internal rule"
-      IProdOutDataTypeStr     "Inherit: Inherit via internal rule"
-      DOutMin		      "[]"
-      DOutMax		      "[]"
-      DOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      DGainOutDataTypeStr     "Inherit: Inherit via internal rule"
-      DProdOutDataTypeStr     "Inherit: Inherit via internal rule"
-      NOutMin		      "[]"
-      NOutMax		      "[]"
-      NOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      NGainOutDataTypeStr     "Inherit: Inherit via internal rule"
-      NProdOutDataTypeStr     "Inherit: Inherit via internal rule"
-      KbOutMin		      "[]"
-      KbOutMax		      "[]"
-      KbOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      KtOutMin		      "[]"
-      KtOutMax		      "[]"
-      KtOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      IntegratorOutMin	      "[]"
-      IntegratorOutMax	      "[]"
-      IntegratorOutDataTypeStr "Inherit: Inherit via internal rule"
-      FilterOutMin	      "[]"
-      FilterOutMax	      "[]"
-      FilterOutDataTypeStr    "Inherit: Inherit via internal rule"
-      SumOutMin		      "[]"
-      SumOutMax		      "[]"
-      SumOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SumI1OutMin	      "[]"
-      SumI1OutMax	      "[]"
-      SumI1OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI2OutMin	      "[]"
-      SumI2OutMax	      "[]"
-      SumI2OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI3OutMin	      "[]"
-      SumI3OutMax	      "[]"
-      SumI3OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumDOutMin	      "[]"
-      SumDOutMax	      "[]"
-      SumDOutDataTypeStr      "Inherit: Inherit via internal rule"
-      SumAccumDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI1AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI2AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI3AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumDAccumDataTypeStr    "Inherit: Inherit via internal rule"
-      SaturationOutMin	      "[]"
-      SaturationOutMax	      "[]"
-      SaturationOutDataTypeStr "Inherit: Same as input"
-      IntegratorContinuousStateAttributes "''"
-      IntegratorStateMustResolveToSignalObject off
-      IntegratorRTWStateStorageClass "Auto"
-      FilterContinuousStateAttributes "''"
-      FilterStateMustResolveToSignalObject off
-      FilterRTWStateStorageClass "Auto"
-      DifferentiatorICPrevScaledInput "0"
-      DifferentiatorOutMin    "[]"
-      DifferentiatorOutMax    "[]"
-      DifferentiatorOutDataTypeStr "Inherit: Inherit via internal rule"
     }
     Block {
       BlockType		      Sin
       Name		      "Sine Wave"
       SID		      "11"
       Ports		      [0, 1]
-      Position		      [-380, 120, -350, 150]
+      Position		      [195, 275, 225, 305]
       ZOrder		      -14
       Amplitude		      "0.0014"
       Frequency		      "2*pi*0.5"
@@ -1323,7 +1199,7 @@ Model {
       Variant		      off
       System {
 	Name			"Subsystem"
-	Location		[100, 100, 600, 900]
+	Location		[-8, -8, 1928, 1048]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1480,7 +1356,7 @@ Model {
 	  Name			  "Radians\nto Degrees"
 	  SID			  "30"
 	  Ports			  [1, 1]
-	  Position		  [1570, 390, 1600, 420]
+	  Position		  [1575, 390, 1605, 420]
 	  ZOrder		  -12
 	  LibraryVersion	  "1.58"
 	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
@@ -1504,7 +1380,7 @@ Model {
 	  Name			  "Radians\nto Degrees2"
 	  SID			  "50"
 	  Ports			  [1, 1]
-	  Position		  [1590, 90, 1620, 120]
+	  Position		  [1575, 90, 1605, 120]
 	  ZOrder		  2
 	  LibraryVersion	  "1.58"
 	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
@@ -1618,7 +1494,7 @@ Model {
 	  BlockType		  Outport
 	  Name			  "Out1"
 	  SID			  "72"
-	  Position		  [705, 23, 735, 37]
+	  Position		  [1645, 53, 1675, 67]
 	  ZOrder		  24
 	  IconDisplay		  "Port number"
 	}
@@ -1635,7 +1511,7 @@ Model {
 	  BlockType		  Outport
 	  Name			  "Out3"
 	  SID			  "74"
-	  Position		  [1638, 243, 1668, 257]
+	  Position		  [1645, 243, 1675, 257]
 	  ZOrder		  26
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -1644,7 +1520,7 @@ Model {
 	  BlockType		  Outport
 	  Name			  "Out4"
 	  SID			  "75"
-	  Position		  [1630, 398, 1660, 412]
+	  Position		  [1645, 398, 1675, 412]
 	  ZOrder		  27
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -1842,7 +1718,7 @@ Model {
 	  Points		  [22, 0]
 	  Branch {
 	    ZOrder		    132
-	    Points		    [0, -95]
+	    Points		    [0, -65]
 	    DstBlock		    "Out1"
 	    DstPort		    1
 	  }
@@ -1956,7 +1832,7 @@ Model {
       Name		      "To Workspace"
       SID		      "32"
       Ports		      [1]
-      Position		      [20, -70, 80, -40]
+      Position		      [265, 170, 325, 200]
       ZOrder		      -15
       VariableName	      "t"
       MaxDataPoints	      "inf"
@@ -1967,7 +1843,7 @@ Model {
       Name		      "To Workspace1"
       SID		      "33"
       Ports		      [1]
-      Position		      [1240, 435, 1300, 465]
+      Position		      [460, 465, 520, 495]
       ZOrder		      -16
       VariableName	      "phi"
       MaxDataPoints	      "inf"
@@ -1978,7 +1854,7 @@ Model {
       Name		      "To Workspace2"
       SID		      "34"
       Ports		      [1]
-      Position		      [1240, 135, 1300, 165]
+      Position		      [460, 250, 520, 280]
       ZOrder		      -17
       VariableName	      "omega_dot"
       MaxDataPoints	      "inf"
@@ -1989,7 +1865,7 @@ Model {
       Name		      "To Workspace3"
       SID		      "35"
       Ports		      [1]
-      Position		      [1240, 286, 1300, 304]
+      Position		      [460, 366, 520, 384]
       ZOrder		      -18
       VariableName	      "omega"
       MaxDataPoints	      "inf"
@@ -2000,7 +1876,7 @@ Model {
       Name		      "motor_torque"
       SID		      "27"
       Ports		      [1]
-      Position		      [1265, -16, 1295, 16]
+      Position		      [460, 134, 490, 166]
       ZOrder		      -20
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -2028,7 +1904,7 @@ Model {
       Name		      "omega_dot_scope"
       SID		      "26"
       Ports		      [1]
-      Position		      [1255, 84, 1285, 116]
+      Position		      [460, 194, 490, 226]
       ZOrder		      -23
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -2050,7 +1926,7 @@ Model {
       Name		      "omega_scope"
       SID		      "25"
       Ports		      [1]
-      Position		      [1240, 229, 1270, 261]
+      Position		      [460, 309, 490, 341]
       ZOrder		      -22
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -2072,7 +1948,7 @@ Model {
       Name		      "phi_scope"
       SID		      "22"
       Ports		      [1]
-      Position		      [1240, 379, 1270, 411]
+      Position		      [460, 409, 490, 441]
       ZOrder		      -24
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -2107,16 +1983,16 @@ Model {
       ZOrder		      154
       SrcBlock		      "Subsystem"
       SrcPort		      4
-      Points		      [880, 0; 0, 85]
+      Points		      [86, 0; 0, 115]
+      Branch {
+	ZOrder			166
+	DstBlock		"phi_scope"
+	DstPort			1
+      }
       Branch {
 	ZOrder			155
 	Points			[0, 55]
 	DstBlock		"To Workspace1"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			11
-	DstBlock		"phi_scope"
 	DstPort			1
       }
     }
@@ -2124,15 +2000,15 @@ Model {
       ZOrder		      153
       SrcBlock		      "Subsystem"
       SrcPort		      3
-      Points		      [888, 0]
+      Points		      [98, 0; 0, 30]
       Branch {
-	ZOrder			38
-	Points			[0, -50]
+	ZOrder			167
 	DstBlock		"omega_scope"
 	DstPort			1
       }
       Branch {
-	ZOrder			16
+	ZOrder			165
+	Points			[0, 50]
 	DstBlock		"To Workspace3"
 	DstPort			1
       }
@@ -2141,10 +2017,10 @@ Model {
       ZOrder		      152
       SrcBlock		      "Subsystem"
       SrcPort		      2
-      Points		      [449, 0; 0, -130; 446, 0]
+      Points		      [98, 0; 0, -15; 0, 0]
       Branch {
 	ZOrder			41
-	Points			[0, -50]
+	Points			[0, -55]
 	DstBlock		"omega_dot_scope"
 	DstPort			1
       }
@@ -2158,7 +2034,6 @@ Model {
       ZOrder		      150
       SrcBlock		      "Sine Wave"
       SrcPort		      1
-      Points		      [316, 0; 0, 155]
       DstBlock		      "Subsystem"
       DstPort		      1
     }
@@ -2166,14 +2041,14 @@ Model {
       ZOrder		      151
       SrcBlock		      "Subsystem"
       SrcPort		      1
-      Points		      [425, 0; 0, -265]
+      Points		      [57, 0; 0, -115]
       DstBlock		      "motor_torque"
       DstPort		      1
     }
     Annotation {
       SID		      "44"
       Name		      "Blocks to display and save data:"
-      Position		      [1185, 46, 1329, 61]
+      Position		      [403, 76, 547, 91]
       InternalMargins	      [0, 0, 0, 0]
       FixedHeight	      off
       FixedWidth	      off
