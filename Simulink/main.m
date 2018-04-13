@@ -29,19 +29,30 @@ g       = 9.81; % Gravity [N/kg].
 R = r_p1 / r_m; % Reduction ratio of the cable transmission [].
 J_eq  = J_p + (J_rotor+J_m) * R^2; % Equivalent total inertia, computed on the paddle side [kg*m^2].
 B_eq  = B_p + B_m * R^2; % Equivalent viscous friction, computed on the paddle side [Nm*s/rad].
-dry_friction = 0.0013; %Nm/s^2
+dry_friction = 0.001; %Nm/s^2
 
 %% Run the Simulink simulation.
-sim('HapticPaddle');
+sim('HapticPaddleSin');
 
 %% Plot the simulation results.
 figure()
-subplot(311)
-plot(t(1:300),phi(1:300))
-title('Angle(degrees)')
-subplot(312)
-plot(t,omega)
-title('Angular velocity(degrees/s)')
-subplot(313)
-plot(t,phi)
-title('Angular acceleration (degrees/s^2)')
+%subplot(311)
+plot(t(1:2000),phi(1:2000))
+%title('Angle(degrees)')
+legend('Simulation')
+xlabel('Time [s]')
+ylabel('Angle [°]')
+%subplot(312)
+figure
+plot(t(1:2000),omega(1:2000))
+legend('Simulation')
+xlabel('Time [s]')
+ylabel('Angular velocity [°/s]')
+%title('Angular velocity(degrees/s)')
+%subplot(313)
+figure
+plot(t(1:2000),phi(1:2000))
+legend('Simulation')
+xlabel('Time [s]')
+ylabel('Angular acceleration [°/s^2]')
+%title('Angular acceleration (degrees/s^2)')

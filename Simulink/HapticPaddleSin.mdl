@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.82"
+    ComputedModelVersion    "1.84"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -65,8 +65,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1886.0, 876.0]
-	ZoomFactor		[0.8]
-	Offset			[-536.57875135487745, -153.34384315728812]
+	ZoomFactor		[1.75]
+	Offset			[-88.626370402496377, 92.322823509378566]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -99,9 +99,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Hannes"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Apr 12 12:28:48 2018"
-  RTWModifiedTimeStamp	  445436893
-  ModelVersionFormat	  "1.%<AutoIncrement:82>"
+  LastModifiedDate	  "Fri Apr 13 13:44:15 2018"
+  RTWModifiedTimeStamp	  445527609
+  ModelVersionFormat	  "1.%<AutoIncrement:84>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1167,7 +1167,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "80"
+    ZoomFactor		    "175"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "76"
     Block {
@@ -1184,7 +1184,7 @@ Model {
       Ports		      [0, 1]
       Position		      [195, 275, 225, 305]
       ZOrder		      -14
-      Amplitude		      "0.0014"
+      Amplitude		      "0.0011"
       Frequency		      "2*pi*0.5"
       SampleTime	      "0"
     }
@@ -2017,7 +2017,7 @@ Model {
       ZOrder		      152
       SrcBlock		      "Subsystem"
       SrcPort		      2
-      Points		      [98, 0; 0, -15; 0, 0]
+      Points		      [98, 0; 0, -15]
       Branch {
 	ZOrder			41
 	Points			[0, -55]

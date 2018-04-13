@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.87"
+    ComputedModelVersion    "1.95"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -99,9 +99,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Hannes"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Apr 12 12:32:27 2018"
-  RTWModifiedTimeStamp	  445437139
-  ModelVersionFormat	  "1.%<AutoIncrement:87>"
+  LastModifiedDate	  "Fri Apr 13 13:36:18 2018"
+  RTWModifiedTimeStamp	  445526888
+  ModelVersionFormat	  "1.%<AutoIncrement:95>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1195,8 +1195,8 @@ Model {
       Form		      "Parallel"
       UseFilter		      on
       ControllerParametersSource "internal"
-      P			      "0.01"
-      I			      "0.1"
+      P			      "0.0025"
+      I			      "0.003"
       D			      "0.0001"
       N			      "100"
       InitialConditionSource  "internal"
