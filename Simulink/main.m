@@ -32,27 +32,32 @@ B_eq  = B_p + B_m * R^2; % Equivalent viscous friction, computed on the paddle s
 dry_friction = 0.001; %Nm/s^2
 
 %% Run the Simulink simulation.
-sim('HapticPaddleSin');
+sim('HapticPaddle');
 
 %% Plot the simulation results.
 figure()
 %subplot(311)
-plot(t(1:2000),phi(1:2000))
+plot(t(1:100),phi(1:100))
+hold on
+plot(t(1:100), ones(1,100)*10)
+plot(t(1:100), ones(1,100)*9.85,'-.')
+plot(t(1:100), ones(1,100)*10.15, '-.')
 %title('Angle(degrees)')
-legend('Simulation')
+%legend('Sinusoidal motor torque simulation')
+legend('PID simulation','Target angle','Upper error 10.15°','Lower error 9.85°')
 xlabel('Time [s]')
-ylabel('Angle [°]')
+ylabel('Angle [deg]')
 %subplot(312)
 figure
 plot(t(1:2000),omega(1:2000))
-legend('Simulation')
+legend('Sinusoidal motor torque simulation')
 xlabel('Time [s]')
-ylabel('Angular velocity [°/s]')
+ylabel('Angular velocity [deg/s]')
 %title('Angular velocity(degrees/s)')
 %subplot(313)
 figure
 plot(t(1:2000),phi(1:2000))
-legend('Simulation')
+legend('Sinusoidal motor torque simulation')
 xlabel('Time [s]')
-ylabel('Angular acceleration [°/s^2]')
+ylabel('Angular acceleration [deg/s^2]')
 %title('Angular acceleration (degrees/s^2)')
