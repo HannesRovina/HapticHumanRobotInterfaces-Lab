@@ -31,33 +31,42 @@ J_eq  = J_p + (J_rotor+J_m) * R^2; % Equivalent total inertia, computed on the p
 B_eq  = B_p + B_m * R^2; % Equivalent viscous friction, computed on the paddle side [Nm*s/rad].
 dry_friction = 0.001; %Nm/s^2
 
+%% Sinusoidal Torque
+sim('HapticPaddleSin');
+
+%% Plot the simulation results.
+figure()
+plt = plot(t(1:3000),phi(1:3000),'LineWidth',2)
+hold on
+xlabel('Time [s]')
+ylabel('Angle [deg]')
+title('Angular displacement(degrees)')
+saveas(plt,'Simulink_Position.png')
+figure
+plt = plot(t(1:3000),omega(1:3000),'LineWidth',2)
+xlabel('Time [s]')
+ylabel('Angular velocity [deg/s]')
+title('Angular velocity(degrees/s)')
+saveas(plt,'Simulink_Velocity.png')
+figure
+plt = plot(t(1:3000),omega_dot(1:3000),'LineWidth',2)
+xlabel('Time [s]')
+ylabel('Angular acceleration [deg/s^2]')
+title('Angular acceleration (degrees/s^2)')
+saveas(plt,'Simulink_Acceleration.png')
+
 %% Run the Simulink simulation.
 sim('HapticPaddle');
 
 %% Plot the simulation results.
 figure()
-%subplot(311)
-plot(t(1:100),phi(1:100))
+plt = plot(t(1:100),phi(1:100),'LineWidth',1.5)
 hold on
-plot(t(1:100), ones(1,100)*10)
-plot(t(1:100), ones(1,100)*9.85,'-.')
-plot(t(1:100), ones(1,100)*10.15, '-.')
-%title('Angle(degrees)')
-%legend('Sinusoidal motor torque simulation')
-legend('PID simulation','Target angle','Upper error 10.15°','Lower error 9.85°')
+plot(t(1:100), ones(1,100)*10,'LineWidth',1.5)
+plot(t(1:100), ones(1,100)*max(phi),'-.','LineWidth',1.5)
+plot(t(1:100), ones(1,100)*9.85,'-.','LineWidth',1.25)
+plot(t(1:100), ones(1,100)*10.15, '-.','LineWidth',1.25)
+legend('PID simulation','Target angle','Maximum overshoot 1.3Â°','Upper error 10.15Â°','Lower error 9.85Â°','Location','southeast')
 xlabel('Time [s]')
 ylabel('Angle [deg]')
-%subplot(312)
-figure
-plot(t(1:2000),omega(1:2000))
-legend('Sinusoidal motor torque simulation')
-xlabel('Time [s]')
-ylabel('Angular velocity [deg/s]')
-%title('Angular velocity(degrees/s)')
-%subplot(313)
-figure
-plot(t(1:2000),phi(1:2000))
-legend('Sinusoidal motor torque simulation')
-xlabel('Time [s]')
-ylabel('Angular acceleration [deg/s^2]')
-%title('Angular acceleration (degrees/s^2)')
+saveas(plt,'Simulink_PID.png')
