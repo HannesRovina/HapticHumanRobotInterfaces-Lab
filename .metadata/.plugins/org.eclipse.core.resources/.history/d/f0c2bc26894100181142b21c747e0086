@@ -139,8 +139,8 @@ void hapt_Update()
 	//Calculate motor torque with PID
 	if(enable_PID)
 	{
-		//hapt_motorTorque = 0.0011*sin(2*3.14*hapt_timestamp*1e-6);
-		hapt_motorTorque = PID_Regulator1(Target_Angle-hapt_paddlePosFilt,Target_Angle-hapt_paddlePrevPos,dt)/REDUCTION_RATIO;
+		hapt_motorTorque = 0.0011*sin(2*3.14*hapt_timestamp*1e-6);
+		//hapt_motorTorque = PID_Regulator1(Target_Angle-hapt_paddlePosFilt,Target_Angle-hapt_paddlePrevPos,dt)/REDUCTION_RATIO;
 		if(first_trigger==0)
 		{
 			first_trigger = 1;

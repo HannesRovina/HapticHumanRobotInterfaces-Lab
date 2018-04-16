@@ -1,4 +1,4 @@
-19:10:00 **** Incremental Build of configuration Debug for project Firmware ****
+17:19:49 **** Incremental Build of configuration Debug for project Firmware ****
 make all 
 Building file: ../src/haptic_controller.c
 Invoking: MCU GCC Compiler
@@ -19,5 +19,5 @@ arm-none-eabi-size "Firmware.elf"
   37484	    540	  35132	  73156	  11dc4	Firmware.elf
  
 
-19:10:03 Build Finished (took 2s.762ms)
+17:19:52 Build Finished (took 2s.546ms)
 
