@@ -1,9 +1,13 @@
-17:19:49 **** Incremental Build of configuration Debug for project Firmware ****
+10:49:26 **** Incremental Build of configuration Debug for project Firmware ****
 make all 
 Building file: ../src/haptic_controller.c
 Invoking: MCU GCC Compiler
 C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+../src/haptic_controller.c: In function 'Compensation':
+../src/haptic_controller.c:224:12: warning: unused variable 'dryfriction' [-Wunused-variable]
+  float32_t dryfriction = 0.0024;
+            ^~~~~~~~~~~
 Finished building: ../src/haptic_controller.c
  
 Building target: Firmware.elf
@@ -16,8 +20,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
 arm-none-eabi-size "Firmware.elf"
    text	   data	    bss	    dec	    hex	filename
-  37484	    540	  35132	  73156	  11dc4	Firmware.elf
+  43212	    540	  35140	  78892	  1342c	Firmware.elf
  
 
-17:19:52 Build Finished (took 2s.546ms)
+10:49:30 Build Finished (took 3s.742ms)
 

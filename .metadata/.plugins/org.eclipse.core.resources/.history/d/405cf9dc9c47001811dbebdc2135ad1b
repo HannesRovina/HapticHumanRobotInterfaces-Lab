@@ -229,6 +229,6 @@ float32_t Compensation(float32_t position, float32_t velocity)
 	if(enable_ViscousFrictionCompensation)
 		CompensationTorque -= viscousfriction*velocity;
 	if(enable_GravityCompensation)
-		CompensationTorque -= MD*g*rg*sin(3.14/180*position);
+		CompensationTorque -= MD*g*rg*sin(position);
 	return CompensationTorque;
 }
