@@ -221,23 +221,20 @@ float32_t Compensation(float32_t position, float32_t velocity)
 	float32_t MD = 0.075;
 	float32_t rg = 0.01988;
 	float32_t g = 9.81;
-	float32_t dryfriction = 0.0026;
+	float32_t dryfriction = 0.0022;
 	float32_t viscousfriction = 8.33e-7;
 	float32_t CompensationTorque = 0.0;
 	int sign = 1;
 	if(enable_DryFrictionCompensation){
 		if(velocity < 0)
-		{
 			sign = -1;
-			dryfriction = 0.0024;
-		}
-		if(velocity>20 || velocity < -20)
+		if(velocity>10 || velocity < -10)
 		{
 			CompensationTorque += sign*dryfriction;
 		}
 		else
 		{
-			CompensationTorque += velocity/20*dryfriction;
+			CompensationTorque += velocity/10*dryfriction;
 		}
 	}
 	if(enable_ViscousFrictionCompensation)

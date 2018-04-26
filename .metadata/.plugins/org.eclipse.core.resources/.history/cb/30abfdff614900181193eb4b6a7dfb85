@@ -227,10 +227,7 @@ float32_t Compensation(float32_t position, float32_t velocity)
 	int sign = 1;
 	if(enable_DryFrictionCompensation){
 		if(velocity < 0)
-		{
 			sign = -1;
-			dryfriction = 0.0024;
-		}
 		if(velocity>20 || velocity < -20)
 		{
 			CompensationTorque += sign*dryfriction;
