@@ -182,8 +182,6 @@ void hapt_Update()
 
 	//Compensation of dry-, viscous friction and gravity
 	hapt_motorTorque += Compensation(hapt_paddlePosFilt, hapt_paddleSpeedFilt);
-
-	//Adding a virtual wall
 	hapt_motorTorque += Wall(hapt_paddlePosFilt, hapt_paddleSpeedFilt);
 
 
@@ -272,5 +270,5 @@ float32_t Wall(float32_t position, float32_t velocity)
 		wall_Torque += -velocity*wall_Damping;
 	}
 
-	return wall_Torque/REDUCTION_RATIO;
+	return wall_Torque;
 }

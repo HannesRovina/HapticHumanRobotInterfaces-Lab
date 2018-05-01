@@ -81,11 +81,11 @@ void hapt_Init(void)
 	//comm_monitorFloat("paddle_speed [deg/s]", (float32_t*)&hapt_paddleSpeed, READONLY);
 	//comm_monitorFloat("paddle_accel [deg/s^2]", (float32_t*)&hapt_paddleAccel, READONLY);
 	comm_monitorFloat("paddle_pos_filt [deg]", (float32_t*)&hapt_paddlePosFilt, READONLY);
-	//comm_monitorFloat("paddle_speed_filt [deg/s]", (float32_t*)&hapt_paddleSpeedFilt, READONLY);
+	comm_monitorFloat("paddle_speed_filt [deg/s]", (float32_t*)&hapt_paddleSpeedFilt, READONLY);
 	//comm_monitorFloat("paddle_accel_filt [deg/s^2]", (float32_t*)&hapt_paddleAccelFilt, READONLY);
-	comm_monitorFloat("hall_voltage [V]", (float32_t*)&hapt_hallVoltage, READONLY);
-	comm_monitorBool("enable PID", (bool*)&enable_PID, WRITEONLY);
-	comm_monitorFloat("Target_Angle [deg]", (float32_t*)&Target_Angle, READWRITE);
+	//comm_monitorFloat("hall_voltage [V]", (float32_t*)&hapt_hallVoltage, READONLY);
+	//comm_monitorBool("enable PID", (bool*)&enable_PID, WRITEONLY);
+	//comm_monitorFloat("Target_Angle [deg]", (float32_t*)&Target_Angle, READWRITE);
 	//comm_monitorFloat("Kp ", (float32_t*)&Kp, READWRITE);
 	//comm_monitorFloat("Ki ", (float32_t*)&Ki, READWRITE);
 	//comm_monitorFloat("Kd ", (float32_t*)&Kd, READWRITE);
@@ -173,7 +173,7 @@ void hapt_Update()
 
 
 	//Compensation of dry-, viscous friction and gravity
-	hapt_motorTorque -= Compensation(hapt_paddlePosFilt, hapt_paddleSpeedFilt)/REDUCTION_RATIO;
+	hapt_motorTorque += Compensation(hapt_paddlePosFilt, hapt_paddleSpeedFilt);
 
 
 	torq_SetTorque(hapt_motorTorque);
@@ -221,14 +221,28 @@ float32_t Compensation(float32_t position, float32_t velocity)
 	float32_t MD = 0.075;
 	float32_t rg = 0.01988;
 	float32_t g = 9.81;
-	float32_t dryfriction = 0.0028;
+	float32_t dryfriction = 0.0026;
 	float32_t viscousfriction = 8.33e-7;
 	float32_t CompensationTorque = 0.0;
-	if(enable_DryFrictionCompensation)
-		CompensationTorque += dryfriction;
+	int sign = 1;
+	if(enable_DryFrictionCompensation){
+		if(velocity < 0)
+		{
+			sign = -1;
+			dryfriction = 0.0024;
+		}
+		if(velocity>20 || velocity < -20)
+		{
+			CompensationTorque += sign*dryfriction;
+		}
+		else
+		{
+			CompensationTorque += velocity/20*dryfriction;
+		}
+	}
 	if(enable_ViscousFrictionCompensation)
 		CompensationTorque += viscousfriction*velocity;
 	if(enable_GravityCompensation)
-		CompensationTorque += MD*g*rg*sin(position);
+		CompensationTorque += MD*g*rg*sin(3.14/180*position)/REDUCTION_RATIO;
 	return CompensationTorque;
 }

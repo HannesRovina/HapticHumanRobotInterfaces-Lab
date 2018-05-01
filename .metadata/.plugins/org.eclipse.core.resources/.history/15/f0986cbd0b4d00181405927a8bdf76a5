@@ -21,10 +21,8 @@ volatile float32_t hapt_paddlePrevSpeed; // Previous paddle speed [deg/s].
 volatile float32_t hapt_paddleSpeedFilt; // Filtered paddle speed [deg/s].
 volatile float32_t hapt_paddleAccelFilt; // Filtered paddle acceleration [deg/s].
 volatile float32_t hapt_motorTorque; // Motor torque [N.m].
-volatile float32_t wall_Stiffness; // wall stiffness [N.m/deg].
-volatile float32_t wall_Damping; // wall damping [N.m/(deg/s)].
 
-volatile float32_t filterCutoffFreqSpeed = 25.0f; // Cutoff frequency for the speed/acceleration filter [Hz].
+const float32_t filterCutoffFreqSpeed = 50.0f; // Cutoff frequency for the speed/acceleration filter [Hz].
 const float32_t filterCutoffFreqAccel = 10.0f; // Cutoff frequency for the speed/acceleration filter [Hz].
 
 volatile bool enable_PID;
@@ -44,7 +42,6 @@ void hapt_Update(void);
 float32_t hapt_LowPassFilter(float32_t previousFilteredValue, float32_t input,float32_t dt, float32_t tau);
 float32_t PID_Regulator1(float32_t error, float32_t previous_error, float32_t dt);
 float32_t Compensation(float32_t position, float32_t velocity);
-float32_t Wall(float32_t position, float32_t velocity);
 /**
 * @brief Initializes the haptic controller.
 */
@@ -53,9 +50,9 @@ void hapt_Init(void)
 	//Initializing variables
 	enable_PID = false;
 	enable_EncoderAngle = false;
-	enable_DryFrictionCompensation = true;
+	enable_DryFrictionCompensation = false;
 	enable_ViscousFrictionCompensation = false;
-	enable_GravityCompensation = true;
+	enable_GravityCompensation = false;
 
 	Kp = 0.0f;
 	Ki = 0.0f;
@@ -72,8 +69,6 @@ void hapt_Init(void)
 	first_trigger = 0;
 	rise_time = 0.0f;
 	overshoot_Angle = 0.0f;
-	wall_Stiffness = 0.0f;
-	wall_Damping = 0.0f;
 
 	// Make the timers call the update function periodically.
 	cbt_SetHapticControllerTimer(hapt_Update, DEFAULT_HAPTIC_CONTROLLER_PERIOD);
@@ -87,9 +82,6 @@ void hapt_Init(void)
 	//comm_monitorFloat("paddle_accel [deg/s^2]", (float32_t*)&hapt_paddleAccel, READONLY);
 	comm_monitorFloat("paddle_pos_filt [deg]", (float32_t*)&hapt_paddlePosFilt, READONLY);
 	comm_monitorFloat("paddle_speed_filt [deg/s]", (float32_t*)&hapt_paddleSpeedFilt, READONLY);
-	comm_monitorFloat("Cutoff frequency [Hz]", (float32_t*)&filterCutoffFreqSpeed, READWRITE);
-	comm_monitorFloat("wall stiffness [N.m/deg]", (float32_t*)&wall_Stiffness, READWRITE);
-	comm_monitorFloat("wall damping [N.m/(deg/s)]", (float32_t*)&wall_Damping, READWRITE);
 	//comm_monitorFloat("paddle_accel_filt [deg/s^2]", (float32_t*)&hapt_paddleAccelFilt, READONLY);
 	//comm_monitorFloat("hall_voltage [V]", (float32_t*)&hapt_hallVoltage, READONLY);
 	//comm_monitorBool("enable PID", (bool*)&enable_PID, WRITEONLY);
@@ -183,9 +175,6 @@ void hapt_Update()
 	//Compensation of dry-, viscous friction and gravity
 	hapt_motorTorque += Compensation(hapt_paddlePosFilt, hapt_paddleSpeedFilt);
 
-	//Adding a virtual wall
-	hapt_motorTorque += Wall(hapt_paddlePosFilt, hapt_paddleSpeedFilt);
-
 
 	torq_SetTorque(hapt_motorTorque);
 
@@ -232,7 +221,7 @@ float32_t Compensation(float32_t position, float32_t velocity)
 	float32_t MD = 0.075;
 	float32_t rg = 0.01988;
 	float32_t g = 9.81;
-	float32_t dryfriction = 0.0014;
+	float32_t dryfriction = 0.0016;
 	float32_t viscousfriction = 8.33e-7;
 	float32_t CompensationTorque = 0.0;
 	int sign = 1;
@@ -240,7 +229,7 @@ float32_t Compensation(float32_t position, float32_t velocity)
 		if(velocity < 0)
 		{
 			sign = -1;
-			dryfriction = 0.0012;
+			dryfriction = 0.0014;
 		}
 		if(velocity>10 || velocity < -10)
 		{
@@ -256,21 +245,4 @@ float32_t Compensation(float32_t position, float32_t velocity)
 	if(enable_GravityCompensation)
 		CompensationTorque += MD*g*rg*sin(3.14/180*position)/REDUCTION_RATIO;
 	return CompensationTorque;
-}
-
-float32_t Wall(float32_t position, float32_t velocity)
-{
-	float32_t wall_Torque = 0.0f;
-	if(position >= 15)
-	{
-		wall_Torque -= wall_Stiffness*(position-15);
-		wall_Torque += -velocity*wall_Damping;
-	}
-	else if (position <= -15)
-	{
-		wall_Torque -= wall_Stiffness*(position+15);
-		wall_Torque += -velocity*wall_Damping;
-	}
-
-	return wall_Torque/REDUCTION_RATIO;
 }

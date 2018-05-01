@@ -272,5 +272,5 @@ float32_t Wall(float32_t position, float32_t velocity)
 		wall_Torque += -velocity*wall_Damping;
 	}
 
-	return wall_Torque/REDUCTION_RATIO;
+	return wall_Torque;
 }
