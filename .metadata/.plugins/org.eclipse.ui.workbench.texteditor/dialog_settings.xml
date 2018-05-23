@@ -2,16 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Cutoff" key="selection"/>
+		<item value="MKB_option" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="enable_velocity_control"/>
+			<item value="target_angle"/>
 			<item value="cutoff"/>
 			<item value="hapt_encoderPaddleOld"/>
 		</list>
 		<list key="replacehistory">
+			<item value="MKB_option"/>
 			<item value="hapt_encoderPaddlePrevious"/>
 		</list>
 	</section>

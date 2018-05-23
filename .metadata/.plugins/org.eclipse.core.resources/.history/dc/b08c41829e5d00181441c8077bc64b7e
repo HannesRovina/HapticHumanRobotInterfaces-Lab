@@ -195,18 +195,15 @@ void hapt_Update()
 		{
 			Kp = 0.005;
 			Kd = 0.0;
-			Ki = 0.0;
 			hapt_motorTorque = PID_Regulator1(target_velocity-hapt_paddleSpeedFilt,target_velocity-hapt_paddlePrevSpeed,dt)/REDUCTION_RATIO;
 		}
 		else if(MKB_option == 2){
 			Kp = 0.05;
 			Kd = 0.0008;
-			Ki = 0.0;
 			hapt_motorTorque = PID_Regulator1(Target_Angle-hapt_paddlePosFilt,Target_Angle-hapt_paddlePrevPos,dt)/REDUCTION_RATIO;
 		}
 		else if(MKB_option == 1){
-					Kp = 0.0005;
-					Ki = 0.0001;
+					Kp = 0.00005;
 					Kd = 0.0;
 					hapt_motorTorque = PID_Regulator1(target_acceleration-hapt_paddleAccelFilt,target_acceleration-hapt_paddlePrevAccel,dt)/REDUCTION_RATIO;
 				}

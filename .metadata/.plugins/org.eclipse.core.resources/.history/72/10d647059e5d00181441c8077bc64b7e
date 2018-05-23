@@ -53,7 +53,7 @@ volatile float32_t strain_measureFilt; // Filtered strain measurement [V].
 volatile float32_t measured_torque;
 volatile float32_t target_velocity;
 volatile float32_t mass;
-volatile float32_t MKB_option;
+volatile uint32_t MKB_option;
 volatile float32_t target_acceleration;
 /**
 * @brief Initializes the haptic controller.
@@ -122,7 +122,7 @@ void hapt_Init(void)
 	//comm_monitorBool("enable Gravity Compensation", (bool*)&enable_GravityCompensation, WRITEONLY);
 	comm_monitorFloat("strain_measurement [V]", (float32_t*)&strain_measure, READONLY);
 	comm_monitorFloat("Torque measurement [Nm]", (float32_t*)&measured_torque, READONLY);
-	comm_monitorFloat("enable acc/pos/vel", (float32_t*)&MKB_option, WRITEONLY);
+	comm_monitorUInt32Func("enable pos/vel/acc control", (uint32_t*)&MKB_option, WRITEONLY);
 	comm_monitorFloat("Mass [kg]", (float32_t*)&mass, READWRITE);
 }
 /**
@@ -195,18 +195,15 @@ void hapt_Update()
 		{
 			Kp = 0.005;
 			Kd = 0.0;
-			Ki = 0.0;
 			hapt_motorTorque = PID_Regulator1(target_velocity-hapt_paddleSpeedFilt,target_velocity-hapt_paddlePrevSpeed,dt)/REDUCTION_RATIO;
 		}
 		else if(MKB_option == 2){
 			Kp = 0.05;
 			Kd = 0.0008;
-			Ki = 0.0;
 			hapt_motorTorque = PID_Regulator1(Target_Angle-hapt_paddlePosFilt,Target_Angle-hapt_paddlePrevPos,dt)/REDUCTION_RATIO;
 		}
 		else if(MKB_option == 1){
 					Kp = 0.0005;
-					Ki = 0.0001;
 					Kd = 0.0;
 					hapt_motorTorque = PID_Regulator1(target_acceleration-hapt_paddleAccelFilt,target_acceleration-hapt_paddlePrevAccel,dt)/REDUCTION_RATIO;
 				}

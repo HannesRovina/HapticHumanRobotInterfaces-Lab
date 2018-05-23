@@ -20,8 +20,7 @@ volatile float32_t hapt_paddlePrevPos; // Previous paddle angle [deg].
 volatile float32_t hapt_paddlePosFilt; // Filtered paddle position [deg].
 volatile float32_t hapt_paddlePrevSpeed; // Previous paddle speed [deg/s].
 volatile float32_t hapt_paddleSpeedFilt; // Filtered paddle speed [deg/s].
-volatile float32_t hapt_paddleAccelFilt; // Filtered paddle acceleration [deg/s^s].
-volatile float32_t hapt_paddlePrevAccel; // Previous paddle acceleration [deg/s^s].
+volatile float32_t hapt_paddleAccelFilt; // Filtered paddle acceleration [deg/s].
 volatile float32_t hapt_motorTorque; // Motor torque [N.m].
 volatile float32_t wall_Stiffness; // wall stiffness [N.m/deg].
 volatile float32_t wall_Damping; // wall damping [N.m/(deg/s)].
@@ -51,10 +50,6 @@ float32_t Wall(float32_t position, float32_t velocity);
 volatile float32_t strain_measure; // Strain gauge measurement
 volatile float32_t strain_measureFilt; // Filtered strain measurement [V].
 volatile float32_t measured_torque;
-volatile float32_t target_velocity;
-volatile float32_t mass;
-volatile float32_t MKB_option;
-volatile float32_t target_acceleration;
 /**
 * @brief Initializes the haptic controller.
 */
@@ -67,9 +62,9 @@ void hapt_Init(void)
 	enable_ViscousFrictionCompensation = false;
 	enable_GravityCompensation = false;
 
-	Kp = 0.05f;
+	Kp = 0.0f;
 	Ki = 0.0f;
-	Kd = 0.0008f;
+	Kd = 0.0f;
 	hapt_timestamp = 0;
 	hapt_motorTorque = 0.0f;
 	hapt_paddlePrevPos = 0.0f;
@@ -82,16 +77,11 @@ void hapt_Init(void)
 	first_trigger = 0;
 	rise_time = 0.0f;
 	overshoot_Angle = 0.0f;
-	wall_Stiffness = 0.5f;
-	wall_Damping = 0.5f;
+	wall_Stiffness = 0.0f;
+	wall_Damping = 0.0f;
 	strain_measure = 0.0f;
 	strain_measureFilt= 0.0f;
 	measured_torque = 0.0f;
-	target_velocity = 0.0f;
-	MKB_option = 0;
-	mass = 1;
-	target_acceleration = 0.0f;
-
 	// Make the timers call the update function periodically.
 	cbt_SetHapticControllerTimer(hapt_Update, DEFAULT_HAPTIC_CONTROLLER_PERIOD);
 
@@ -106,7 +96,7 @@ void hapt_Init(void)
 	comm_monitorFloat("paddle_speed_filt [deg/s]", (float32_t*)&hapt_paddleSpeedFilt, READONLY);
 	//comm_monitorFloat("Cutoff frequency [Hz]", (float32_t*)&filterCutoffFreqSpeed, READWRITE);
 	comm_monitorFloat("wall stiffness [N.m/deg]", (float32_t*)&wall_Stiffness, READWRITE);
-	comm_monitorFloat("wall damping [N.m/(deg/s)]", (float32_t*)&wall_Damping, READWRITE);
+	//comm_monitorFloat("wall damping [N.m/(deg/s)]", (float32_t*)&wall_Damping, READWRITE);
 	//comm_monitorFloat("paddle_accel_filt [deg/s^2]", (float32_t*)&hapt_paddleAccelFilt, READONLY);
 	//comm_monitorFloat("hall_voltage [V]", (float32_t*)&hapt_hallVoltage, READONLY);
 	comm_monitorBool("enable PID", (bool*)&enable_PID, WRITEONLY);
@@ -122,8 +112,6 @@ void hapt_Init(void)
 	//comm_monitorBool("enable Gravity Compensation", (bool*)&enable_GravityCompensation, WRITEONLY);
 	comm_monitorFloat("strain_measurement [V]", (float32_t*)&strain_measure, READONLY);
 	comm_monitorFloat("Torque measurement [Nm]", (float32_t*)&measured_torque, READONLY);
-	comm_monitorFloat("enable acc/pos/vel", (float32_t*)&MKB_option, WRITEONLY);
-	comm_monitorFloat("Mass [kg]", (float32_t*)&mass, READWRITE);
 }
 /**
 * @brief Updates the haptic controller state.
@@ -146,8 +134,7 @@ void hapt_Update()
 
 
 	Target_Angle = measured_torque/wall_Stiffness;
-	target_velocity = measured_torque/wall_Damping;
-	target_acceleration = measured_torque/mass;
+
 	// Get the Hall sensor voltage.
 	hapt_hallVoltage = hall_GetVoltage();
 
@@ -191,25 +178,7 @@ void hapt_Update()
 	if(enable_PID)
 	{
 		//hapt_motorTorque = 0.0011*sin(2*3.14*hapt_timestamp*1e-6);
-		if(MKB_option==3)
-		{
-			Kp = 0.005;
-			Kd = 0.0;
-			Ki = 0.0;
-			hapt_motorTorque = PID_Regulator1(target_velocity-hapt_paddleSpeedFilt,target_velocity-hapt_paddlePrevSpeed,dt)/REDUCTION_RATIO;
-		}
-		else if(MKB_option == 2){
-			Kp = 0.05;
-			Kd = 0.0008;
-			Ki = 0.0;
-			hapt_motorTorque = PID_Regulator1(Target_Angle-hapt_paddlePosFilt,Target_Angle-hapt_paddlePrevPos,dt)/REDUCTION_RATIO;
-		}
-		else if(MKB_option == 1){
-					Kp = 0.0005;
-					Ki = 0.0001;
-					Kd = 0.0;
-					hapt_motorTorque = PID_Regulator1(target_acceleration-hapt_paddleAccelFilt,target_acceleration-hapt_paddlePrevAccel,dt)/REDUCTION_RATIO;
-				}
+		hapt_motorTorque = PID_Regulator1(Target_Angle-hapt_paddlePosFilt,Target_Angle-hapt_paddlePrevPos,dt)/REDUCTION_RATIO;
 		if(first_trigger==0)
 		{
 			first_trigger = 1;
@@ -231,18 +200,17 @@ void hapt_Update()
 
 
 	//Compensation of dry-, viscous friction and gravity
-	//hapt_motorTorque += Compensation(hapt_paddlePosFilt, hapt_paddleSpeedFilt);
+	hapt_motorTorque += Compensation(hapt_paddlePosFilt, hapt_paddleSpeedFilt);
 
 	//Adding a virtual wall
-	//hapt_motorTorque += Wall(hapt_paddlePosFilt, hapt_paddleSpeedFilt);
+	hapt_motorTorque += Wall(hapt_paddlePosFilt, hapt_paddleSpeedFilt);
 
 
 	torq_SetTorque(hapt_motorTorque);
 
 	//Store the previous position and speed for derivative purposes
 	hapt_paddlePrevPos = hapt_paddlePosFilt;
-	hapt_paddlePrevSpeed = hapt_paddleSpeedFilt;
-	hapt_paddlePrevAccel = hapt_paddleAccelFilt;
+	hapt_paddlePrevSpeed = hapt_paddleSpeed;
 }
 
 
