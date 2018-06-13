@@ -2468,3 +2468,1039 @@ arm-none-eabi-size "Firmware.elf"
    text	   data	    bss	    dec	    hex	filename
   38268	    544	  35176	  73988	  12104	Firmware.elf
  
+08:35:02 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38308	    544	  35176	  74028	  1212c	Firmware.elf
+ 
+08:48:13 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38308	    544	  35176	  74028	  1212c	Firmware.elf
+ 
+08:53:44 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38364	    544	  35176	  74084	  12164	Firmware.elf
+ 
+08:59:11 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38332	    544	  35176	  74052	  12144	Firmware.elf
+ 
+09:01:15 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38332	    544	  35176	  74052	  12144	Firmware.elf
+ 
+09:03:12 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38332	    544	  35176	  74052	  12144	Firmware.elf
+ 
+09:05:26 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38332	    544	  35176	  74052	  12144	Firmware.elf
+ 
+09:12:46 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38292	    544	  35176	  74012	  1211c	Firmware.elf
+ 
+09:55:02 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38292	    544	  35176	  74012	  1211c	Firmware.elf
+ 
+10:10:24 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38372	    544	  35184	  74100	  12174	Firmware.elf
+ 
+10:16:37 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38372	    544	  35184	  74100	  12174	Firmware.elf
+ 
+10:25:02 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38372	    544	  35184	  74100	  12174	Firmware.elf
+ 
+10:27:32 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38372	    544	  35184	  74100	  12174	Firmware.elf
+ 
+10:28:12 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38372	    544	  35184	  74100	  12174	Firmware.elf
+ 
+10:28:37 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38364	    544	  35184	  74092	  1216c	Firmware.elf
+ 
+10:31:15 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38364	    544	  35184	  74092	  1216c	Firmware.elf
+ 
+10:32:03 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38388	    544	  35184	  74116	  12184	Firmware.elf
+ 
+11:00:04 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38676	    544	  35192	  74412	  122ac	Firmware.elf
+ 
+16:57:13 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38676	    544	  35192	  74412	  122ac	Firmware.elf
+ 
+16:58:21 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38676	    544	  35192	  74412	  122ac	Firmware.elf
+ 
+17:01:14 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38676	    544	  35192	  74412	  122ac	Firmware.elf
+ 
+17:06:02 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38612	    544	  35192	  74348	  1226c	Firmware.elf
+ 
+17:06:25 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38612	    544	  35192	  74348	  1226c	Firmware.elf
+ 
+17:08:05 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38612	    544	  35192	  74348	  1226c	Firmware.elf
+ 
+17:11:55 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38604	    544	  35192	  74340	  12264	Firmware.elf
+ 
+17:19:33 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38596	    544	  35192	  74332	  1225c	Firmware.elf
+ 
+17:26:57 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38580	    544	  35192	  74316	  1224c	Firmware.elf
+ 
+17:28:29 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38580	    544	  35192	  74316	  1224c	Firmware.elf
+ 
+17:35:15 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38596	    544	  35192	  74332	  1225c	Firmware.elf
+ 
+17:44:22 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38868	    544	  35192	  74604	  1236c	Firmware.elf
+ 
+17:49:50 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39204	    544	  35192	  74940	  124bc	Firmware.elf
+ 
+17:52:21 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39204	    544	  35192	  74940	  124bc	Firmware.elf
+ 
+17:55:09 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39212	    544	  35192	  74948	  124c4	Firmware.elf
+ 
+17:56:18 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39212	    544	  35192	  74948	  124c4	Firmware.elf
+ 
+17:59:02 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39204	    544	  35192	  74940	  124bc	Firmware.elf
+ 
+18:03:01 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39236	    544	  35192	  74972	  124dc	Firmware.elf
+ 
+18:15:42 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39236	    544	  35192	  74972	  124dc	Firmware.elf
+ 
+18:19:33 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39300	    544	  35192	  75036	  1251c	Firmware.elf
+ 
+11:30:34 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39300	    544	  35192	  75036	  1251c	Firmware.elf
+ 
+11:32:17 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39332	    544	  35192	  75068	  1253c	Firmware.elf
+ 
+11:40:42 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39284	    544	  35192	  75020	  1250c	Firmware.elf
+ 
+12:33:51 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39148	    544	  35192	  74884	  12484	Firmware.elf
+ 
+12:42:12 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39164	    544	  35192	  74900	  12494	Firmware.elf
+ 
+12:50:57 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39252	    548	  35196	  74996	  124f4	Firmware.elf
+ 
+13:05:06 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39332	    548	  35196	  75076	  12544	Firmware.elf
+ 
+13:12:44 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39396	    548	  35196	  75140	  12584	Firmware.elf
+ 
+13:21:48 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39388	    548	  35196	  75132	  1257c	Firmware.elf
+ 
+13:25:58 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39412	    548	  35196	  75156	  12594	Firmware.elf
+ 
+13:32:04 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39428	    548	  35196	  75172	  125a4	Firmware.elf
+ 
+13:37:13 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39500	    548	  35196	  75244	  125ec	Firmware.elf
+ 
+13:41:15 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39492	    548	  35196	  75236	  125e4	Firmware.elf
+ 
+13:51:47 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39388	    548	  35196	  75132	  1257c	Firmware.elf
+ 
+13:53:42 **** Incremental Build of configuration Debug for project Firmware ****
+make all 
+Building file: ../src/haptic_controller.c
+Invoking: MCU GCC Compiler
+C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F407VGTx '-DHSE_VALUE=8000000' -DSTM32F40_41xxx -D__FPU_PRESENT -DARM_MATH_CM4 -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -DSTM32F407xx -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/core" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/CMSIS/device" -I"C:/Users/Hannes/Desktop/Master/HapticHumanRobotInterfaces/Firmware/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -ffunction-sections -c -MMD -MP -MF"src/haptic_controller.d" -MT"src/haptic_controller.o" -o "src/haptic_controller.o" "../src/haptic_controller.c"
+Finished building: ../src/haptic_controller.c
+ 
+Building target: Firmware.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fmessage-length=0 -specs=nano.specs -specs=nosys.specs -u _printf_float -u _scanf_float -T"C:\Users\Hannes\Desktop\Master\HapticHumanRobotInterfaces\Firmware\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Firmware.elf" @"objects.list"  -lm -lm
+Finished building target: Firmware.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Firmware.elf" "Firmware.bin"
+arm-none-eabi-size "Firmware.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39388	    548	  35196	  75132	  1257c	Firmware.elf
+ 

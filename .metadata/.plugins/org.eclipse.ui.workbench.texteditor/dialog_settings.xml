@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="MKB_option" key="selection"/>
+		<item value="enable_MKB" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="enable_MKB"/>
+			<item value="wall_Stiffness"/>
 			<item value="enable_velocity_control"/>
 			<item value="target_angle"/>
 			<item value="cutoff"/>
